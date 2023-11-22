@@ -30,11 +30,12 @@ class FirstRoute extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
               "assets/img/welcome_img.jpg",
             ),
-            const SizedBox(height: 40),
+            const SizedBox(height: 100),
             ElevatedButton(
               child: const Text('Spila leik'),
               onPressed: () {

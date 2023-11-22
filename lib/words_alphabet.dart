@@ -50,7 +50,7 @@ List<String> words = [
   "Vegur",
   "Forrit",
   "Tölva",
-  "lyklaborð",
+  "lyklar",
   "mús",
   "Stóll",
   "Kjóll",
@@ -68,3 +68,8 @@ List<String> words = [
 
 //create a string with a ramdom word from the list words
 String word = words[Random().nextInt(words.length)];
+
+//create a function that gets a new random word from the list words
+String newWord() {
+  return words[Random().nextInt(words.length)];
+}
