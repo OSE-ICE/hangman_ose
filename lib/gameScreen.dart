@@ -81,11 +81,8 @@ class _SecondRouteState extends State<SecondRoute> {
                             setState(() {
                               Game.selectedCharacter.add(e);
                               print(Game.selectedCharacter);
-                              if (word.split("").contains(e.toUpperCase())) {
-                                return;
-                              } else if (!word
-                                  .split("")
-                                  .contains(e.toUpperCase())) {
+                              print(word.toUpperCase().split(""));
+                              if (!word.split("").contains(e.toUpperCase())) {
                                 Game.tries++;
                               }
                             });
@@ -93,6 +90,9 @@ class _SecondRouteState extends State<SecondRoute> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(4.0),
                     ),
+                    fillColor: Game.selectedCharacter.contains(e)
+                        ? Colors.grey
+                        : Colors.indigo.shade500,
                     child: Text(
                       e,
                       style: const TextStyle(
@@ -101,9 +101,6 @@ class _SecondRouteState extends State<SecondRoute> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    fillColor: Game.selectedCharacter.contains(e)
-                        ? Colors.grey
-                        : Colors.indigo.shade500,
                   );
                 }).toList(),
               ),

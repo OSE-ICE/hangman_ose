@@ -37,36 +37,10 @@ List<String> alphabet = [
 
 List<String> words = [
   "Hús",
-  "Bíll",
-  "Sjór",
-  "Hestur",
-  "Hundur",
-  "Köttur",
-  "Hús",
-  "Bíll",
-  "Sjór",
-  "Hestur",
-  "Hundur",
-  "Vegur",
-  "Forrit",
-  "Tölva",
-  "lyklar",
-  "mús",
-  "Stóll",
-  "Kjóll",
-  "Borð",
-  "Kind",
-  "Vesti",
-  "Veski",
-  "Taska",
-  "Hnöttur",
-  "Hnífur",
-  "Skór",
-  "Buxur",
-  "Húfa",
+  "Belti",
 ];
 
-//create a string with a ramdom word from the list words
+//create a string with a random word from the list words
 String word = words[Random().nextInt(words.length)];
 
 //create a function that gets a new random word from the list words
