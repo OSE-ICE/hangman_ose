@@ -40,10 +40,8 @@ List<String> words = [
   "Belti",
 ];
 
-//create a string with a random word from the list words
 String word = words[Random().nextInt(words.length)];
 
-//create a function that gets a new random word from the list words
 String newWord() {
   return words[Random().nextInt(words.length)];
 }

@@ -1,9 +1,7 @@
-import 'package:hangman_ose/main.dart';
 import 'package:flutter/material.dart';
 import 'package:hangman_ose/widget/progress_image.dart';
 import 'package:hangman_ose/words_alphabet.dart';
 import 'package:hangman_ose/widget/letter.dart';
-import 'dart:math';
 
 class SecondRoute extends StatefulWidget {
   const SecondRoute({Key? key}) : super(key: key);
@@ -44,6 +42,7 @@ class _SecondRouteState extends State<SecondRoute> {
                   progressImage(Game.tries >= 5, "assets/img/progress_5.png"),
                   progressImage(Game.tries >= 6, "assets/img/progress_6.png"),
                   progressImage(Game.tries >= 7, "assets/img/progress_7.png"),
+                  progressImage(Game.tries >= 8, "assets/img/victory.png"),
                 ],
               ),
             ),
@@ -51,23 +50,23 @@ class _SecondRouteState extends State<SecondRoute> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: word
                   .split("")
-                  .map((e) => letter(e.toUpperCase(),
-                      !Game.selectedCharacter.contains(e.toUpperCase())))
+                  .map((e) => letter(
+                      e.toUpperCase(),
+                      Game.tries >= 7
+                          ? false
+                          : !Game.selectedCharacter.contains(e.toUpperCase())))
                   .toList(),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Tilraunir eftir: ${Game.tries - 7}",
-                style: const TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.bold,
-                ),
+            Text(
+              "Tilraunir eftir: ${Game.lives - Game.tries}",
+              style: const TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
               ),
             ),
             SizedBox(
               width: double.infinity,
-              height: 350.0,
+              height: 300.0,
               child: GridView.count(
                 crossAxisCount: 7,
                 mainAxisSpacing: 8.0,
@@ -75,18 +74,32 @@ class _SecondRouteState extends State<SecondRoute> {
                 padding: const EdgeInsets.all(8.0),
                 children: alphabet.map((e) {
                   return RawMaterialButton(
-                    onPressed: Game.selectedCharacter.contains(e)
-                        ? null
-                        : () {
-                            setState(() {
-                              Game.selectedCharacter.add(e);
-                              print(Game.selectedCharacter);
-                              print(word.toUpperCase().split(""));
-                              if (!word.split("").contains(e.toUpperCase())) {
-                                Game.tries++;
+                    onPressed:
+                        Game.tries < 7 && !Game.selectedCharacter.contains(e)
+                            ? () {
+                                setState(() {
+                                  Game.selectedCharacter.add(e);
+                                  if (word
+                                      .toUpperCase()
+                                      .split("")
+                                      .contains(e.toUpperCase())) {
+                                    Game.checkWinner.add(e);
+                                  }
+                                  if (!word
+                                      .toUpperCase()
+                                      .split("")
+                                      .contains(e.toUpperCase())) {
+                                    Game.tries++;
+                                  }
+                                  if (Set.from(word.toUpperCase().split(""))
+                                      .difference(Game.checkWinner.toSet())
+                                      .isEmpty) {
+                                    Game.tries = 8;
+                                    Game.lives = 8;
+                                  }
+                                });
                               }
-                            });
-                          },
+                            : null,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(4.0),
                     ),
@@ -111,7 +124,9 @@ class _SecondRouteState extends State<SecondRoute> {
                 onPressed: () {
                   setState(() {
                     Game.selectedCharacter = [];
+                    Game.checkWinner = [];
                     Game.tries = 0;
+                    Game.lives = 7;
                     word = newWord();
                   });
                 },

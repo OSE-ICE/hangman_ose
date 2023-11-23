@@ -4,18 +4,8 @@ Widget progressImage(bool visible, String path) {
   return Visibility(
     visible: visible,
     child: Container(
-      width: 250,
-      height: 250,
-      child: Image.asset(path),
-    ),
-  );
-}
-
-Widget victoryImage(String path) {
-  return Visibility(
-    child: Container(
-      width: 250,
-      height: 250,
+      width: 300,
+      height: 300,
       child: Image.asset(path),
     ),
   );
@@ -24,4 +14,6 @@ Widget victoryImage(String path) {
 class Game {
   static int tries = 0;
   static List<String> selectedCharacter = [];
+  static int lives = 7;
+  static List<String> checkWinner = [];
 }

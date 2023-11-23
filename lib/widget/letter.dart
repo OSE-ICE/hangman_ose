@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 Widget letter(String character, bool hidden) {
   return Container(
-    height: 50,
-    width: 50,
-    padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 18.0),
+    height: 45,
+    width: 45,
+    padding: const EdgeInsets.fromLTRB(17, 10, 5, 5),
     decoration: BoxDecoration(
       color: Colors.indigo.shade400,
       borderRadius: BorderRadius.circular(4.0),
