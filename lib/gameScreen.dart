@@ -17,9 +17,9 @@ class _SecondRouteState extends State<SecondRoute> {
       appBar: AppBar(
         backgroundColor: Colors.indigo.shade500,
         title: const Center(
-            widthFactor: 2.5,
+            widthFactor: 2.1,
             child: Text(
-              'Hangman',
+              'Hengimann',
               style: TextStyle(
                 fontSize: 24,
                 color: Colors.white,
@@ -28,7 +28,7 @@ class _SecondRouteState extends State<SecondRoute> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Center(
@@ -118,20 +118,23 @@ class _SecondRouteState extends State<SecondRoute> {
                 }).toList(),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    Game.selectedCharacter = [];
-                    Game.checkWinner = [];
-                    Game.tries = 0;
-                    Game.lives = 7;
-                    word = newWord();
-                  });
-                },
-                child: const Text(
-                  'Spila aftur',
+            Visibility(
+              visible: Game.tries >= 7,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      Game.selectedCharacter = [];
+                      Game.checkWinner = [];
+                      Game.tries = 0;
+                      Game.lives = 7;
+                      word = newWord();
+                    });
+                  },
+                  child: const Text(
+                    'Spila aftur',
+                  ),
                 ),
               ),
             ),

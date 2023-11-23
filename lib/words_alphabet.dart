@@ -38,6 +38,14 @@ List<String> alphabet = [
 List<String> words = [
   "Hús",
   "Belti",
+  "Skóli",
+  "Epli",
+  "Bíll",
+  "Sjór",
+  "Hestur",
+  "Hundur",
+  "Köttur",
+  "Taska",
 ];
 
 String word = words[Random().nextInt(words.length)];

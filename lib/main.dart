@@ -20,7 +20,7 @@ class FirstRoute extends StatelessWidget {
         backgroundColor: Colors.indigo.shade500,
         title: const Center(
           child: Text(
-            'Hangman',
+            'Hengimann',
             style: TextStyle(
               fontSize: 24,
               color: Colors.white,
