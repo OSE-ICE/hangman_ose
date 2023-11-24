@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hangman_ose/gameScreen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(
@@ -18,13 +19,10 @@ class FirstRoute extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.indigo.shade500,
-        title: const Center(
+        title: Center(
           child: Text(
             'Hengimann',
-            style: TextStyle(
-              fontSize: 24,
-              color: Colors.white,
-            ),
+            style: GoogleFonts.caveat(fontSize: 50, color: Colors.white),
           ),
         ),
       ),
@@ -37,7 +35,13 @@ class FirstRoute extends StatelessWidget {
             ),
             const SizedBox(height: 100),
             ElevatedButton(
-              child: const Text('Spila leik'),
+              child: Text(
+                'Spila leik',
+                style: GoogleFonts.roboto(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,

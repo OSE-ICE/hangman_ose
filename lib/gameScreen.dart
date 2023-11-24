@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hangman_ose/widget/progress_image.dart';
 import 'package:hangman_ose/words_alphabet.dart';
 import 'package:hangman_ose/widget/letter.dart';
@@ -16,14 +17,11 @@ class _SecondRouteState extends State<SecondRoute> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.indigo.shade500,
-        title: const Center(
-            widthFactor: 2.1,
+        title: Center(
+            widthFactor: 1.5,
             child: Text(
               'Hengimann',
-              style: TextStyle(
-                fontSize: 24,
-                color: Colors.white,
-              ),
+              style: GoogleFonts.caveat(fontSize: 50, color: Colors.white),
             )),
       ),
       body: Center(
@@ -132,8 +130,12 @@ class _SecondRouteState extends State<SecondRoute> {
                       word = newWord();
                     });
                   },
-                  child: const Text(
+                  child: Text(
                     'Spila aftur',
+                    style: GoogleFonts.roboto(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
                   ),
                 ),
               ),
