@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hangman_ose/gameScreen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hangman_ose/jokes.dart';
 
 void main() {
   runApp(
@@ -28,12 +29,25 @@ class FirstRoute extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Image.asset(
               "assets/img/welcome_img.jpg",
             ),
-            const SizedBox(height: 100),
+            const SizedBox(height: 20),
+            SizedBox(
+              width: 380,
+              child: Center(
+                child: Text(
+                  randomJokes,
+                  style: GoogleFonts.roboto(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 80),
             ElevatedButton(
               child: Text(
                 'Spila leik',
@@ -49,6 +63,7 @@ class FirstRoute extends StatelessWidget {
                 );
               },
             ),
+            const SizedBox(height: 5),
           ],
         ),
       ),
