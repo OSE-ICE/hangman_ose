@@ -23,6 +23,7 @@ class FirstRoute extends StatelessWidget {
         foregroundColor: Colors.white,
         backgroundColor: Colors.indigo.shade500,
         title: Center(
+          widthFactor: 1.5,
           child: Text(
             'Hengimann',
             style: GoogleFonts.caveat(fontSize: 50, color: Colors.white),
