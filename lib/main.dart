@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hangman_ose/gameScreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hangman_ose/jokes.dart';
+import 'package:hangman_ose/about_screen.dart';
 
 void main() {
   runApp(
@@ -19,12 +20,49 @@ class FirstRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        foregroundColor: Colors.white,
         backgroundColor: Colors.indigo.shade500,
         title: Center(
           child: Text(
             'Hengimann',
             style: GoogleFonts.caveat(fontSize: 50, color: Colors.white),
           ),
+        ),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.indigo.shade500,
+              ),
+              child: Text(
+                'Hengimann',
+                style: GoogleFonts.caveat(
+                  fontSize: 50,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.article_rounded),
+              title: const Text('Um Hengimann'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AboutScreen()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.games),
+              title: const Text('Málshættir'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
         ),
       ),
       body: Center(
