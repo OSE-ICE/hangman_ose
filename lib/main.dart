@@ -3,6 +3,7 @@ import 'package:hangman_ose/gameScreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hangman_ose/jokes.dart';
 import 'package:hangman_ose/about_screen.dart';
+import 'package:hangman_ose/proverbs.dart';
 
 void main() {
   runApp(
@@ -58,9 +59,13 @@ class FirstRoute extends StatelessWidget {
             ),
             ListTile(
               leading: const Icon(Icons.games),
-              title: const Text('Málshættir'),
+              title: const Text('Giskaðu á málsháttinn'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProverbScreen()),
+                );
               },
             ),
           ],

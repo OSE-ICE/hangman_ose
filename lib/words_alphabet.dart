@@ -53,3 +53,11 @@ String word = words[Random().nextInt(words.length)];
 String newWord() {
   return words[Random().nextInt(words.length)];
 }
+
+List<String> proverbs = [
+  "Sjaldan\n fellur\n eplið\n langt\n frá\n eikini",
+  "sjaldan\n er\n ein\n báran\n stök",
+  "Glöggt\n er\n gests\n augað",
+];
+
+String randomProverb = proverbs[Random().nextInt(proverbs.length)];

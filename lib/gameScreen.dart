@@ -57,9 +57,9 @@ class _SecondRouteState extends State<SecondRoute> {
             ),
             Text(
               "Tilraunir eftir: ${Game.lives - Game.tries}",
-              style: const TextStyle(
-                fontSize: 16.0,
+              style: GoogleFonts.roboto(
                 fontWeight: FontWeight.bold,
+                fontSize: 16,
               ),
             ),
             SizedBox(
