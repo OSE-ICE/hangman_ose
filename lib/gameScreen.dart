@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hangman_ose/widget/progress_image.dart';
 import 'package:hangman_ose/words_alphabet.dart';
 import 'package:hangman_ose/widget/letter.dart';
+import 'package:hangman_ose/game.dart';
 
 class SecondRoute extends StatefulWidget {
   const SecondRoute({Key? key}) : super(key: key);
@@ -96,6 +97,11 @@ class _SecondRouteState extends State<SecondRoute> {
                                     Game.lives = 8;
                                   }
                                 });
+                                print(Game.lives);
+                                print(Game.tries);
+                                print(word.toUpperCase().split(""));
+                                print(Game.checkWinner.toSet());
+                                print(Game.checkWinner);
                               }
                             : null,
                     shape: RoundedRectangleBorder(

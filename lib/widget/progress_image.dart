@@ -10,10 +10,3 @@ Widget progressImage(bool visible, String path) {
     ),
   );
 }
-
-class Game {
-  static int tries = 0;
-  static List<String> selectedCharacter = [];
-  static int lives = 7;
-  static List<String> checkWinner = [];
-}
