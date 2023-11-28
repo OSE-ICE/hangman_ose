@@ -10,10 +10,10 @@ class SecondRoute extends StatefulWidget {
   const SecondRoute({Key? key}) : super(key: key);
 
   @override
-  _SecondRouteState createState() => _SecondRouteState();
+  SecondRouteState createState() => SecondRouteState();
 }
 
-class _SecondRouteState extends State<SecondRoute> {
+class SecondRouteState extends State<SecondRoute> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

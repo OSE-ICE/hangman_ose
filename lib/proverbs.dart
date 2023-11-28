@@ -9,10 +9,10 @@ class ProverbScreen extends StatefulWidget {
   const ProverbScreen({Key? key}) : super(key: key);
 
   @override
-  _ProverbScreenState createState() => _ProverbScreenState();
+  ProverbScreenState createState() => ProverbScreenState();
 }
 
-class _ProverbScreenState extends State<ProverbScreen> {
+class ProverbScreenState extends State<ProverbScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
