@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:hangman_ose/widget/headline_text.dart';
 import 'package:hangman_ose/widget/main_text.dart';
 import 'package:hangman_ose/widget/progress_image.dart';
@@ -130,13 +129,7 @@ class _SecondRouteState extends State<SecondRoute> {
                       word = newWord();
                     });
                   },
-                  child: Text(
-                    'Spila aftur',
-                    style: GoogleFonts.roboto(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
-                  ),
+                  child: mainText("Spila aftur"),
                 ),
               ),
             ),
