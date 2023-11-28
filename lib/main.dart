@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hangman_ose/gameScreen.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:hangman_ose/jokes.dart';
 import 'package:hangman_ose/about_screen.dart';
 import 'package:hangman_ose/proverbs.dart';
+import 'package:hangman_ose/widget/headline_text.dart';
+import 'package:hangman_ose/widget/main_text.dart';
 
 void main() {
   runApp(
@@ -25,10 +26,7 @@ class FirstRoute extends StatelessWidget {
         backgroundColor: Colors.indigo.shade500,
         title: Center(
           widthFactor: 1.5,
-          child: Text(
-            'Hengimann',
-            style: GoogleFonts.caveat(fontSize: 50, color: Colors.white),
-          ),
+          child: headlineText("Hengimann"),
         ),
       ),
       drawer: Drawer(
@@ -39,13 +37,7 @@ class FirstRoute extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.indigo.shade500,
               ),
-              child: Text(
-                'Hengimann',
-                style: GoogleFonts.caveat(
-                  fontSize: 50,
-                  color: Colors.white,
-                ),
-              ),
+              child: headlineText("Hengimann"),
             ),
             ListTile(
               leading: const Icon(Icons.article_rounded),
@@ -82,24 +74,12 @@ class FirstRoute extends StatelessWidget {
             SizedBox(
               width: 380,
               child: Center(
-                child: Text(
-                  randomJokes,
-                  style: GoogleFonts.roboto(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                child: mainText(randomJokes),
               ),
             ),
             const SizedBox(height: 80),
             ElevatedButton(
-              child: Text(
-                'Spila leik',
-                style: GoogleFonts.roboto(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
-                ),
-              ),
+              child: mainText("Spila leik"),
               onPressed: () {
                 Navigator.push(
                   context,

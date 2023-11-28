@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hangman_ose/widget/headline_text.dart';
+import 'package:hangman_ose/widget/main_text.dart';
 import 'package:hangman_ose/widget/progress_image.dart';
 import 'package:hangman_ose/words_alphabet.dart';
 import 'package:hangman_ose/widget/letter.dart';
@@ -19,11 +21,9 @@ class _SecondRouteState extends State<SecondRoute> {
       appBar: AppBar(
         backgroundColor: Colors.indigo.shade500,
         title: Center(
-            widthFactor: 1.5,
-            child: Text(
-              'Hengimann',
-              style: GoogleFonts.caveat(fontSize: 50, color: Colors.white),
-            )),
+          widthFactor: 1.5,
+          child: headlineText("Hengimann"),
+        ),
       ),
       body: Center(
         child: Column(
@@ -56,13 +56,7 @@ class _SecondRouteState extends State<SecondRoute> {
                           : !Game.selectedCharacter.contains(e.toUpperCase())))
                   .toList(),
             ),
-            Text(
-              "Tilraunir eftir: ${Game.lives - Game.tries}",
-              style: GoogleFonts.roboto(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-              ),
-            ),
+            mainText("Tilraunir eftir: ${Game.lives - Game.tries}"),
             SizedBox(
               width: double.infinity,
               height: 300.0,

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:hangman_ose/game.dart';
+import 'package:hangman_ose/widget/headline_text.dart';
 import 'package:hangman_ose/widget/letter.dart';
+import 'package:hangman_ose/widget/main_text.dart';
 import 'package:hangman_ose/words_alphabet.dart';
 
 class ProverbScreen extends StatefulWidget {
@@ -18,11 +19,9 @@ class _ProverbScreenState extends State<ProverbScreen> {
       appBar: AppBar(
         backgroundColor: Colors.indigo.shade500,
         title: Center(
-            widthFactor: 1.5,
-            child: Text(
-              'Hengimann',
-              style: GoogleFonts.caveat(fontSize: 50, color: Colors.white),
-            )),
+          widthFactor: 1.5,
+          child: headlineText("Hengimann"),
+        ),
       ),
       body: Center(
         child: Column(
@@ -31,11 +30,7 @@ class _ProverbScreenState extends State<ProverbScreen> {
           children: [
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Text(
-                "Giskaðu á málsháttinn...",
-                style: GoogleFonts.roboto(
-                    fontSize: 20, fontWeight: FontWeight.bold),
-              ),
+              child: mainText("Giskaðu á málsháttinn"),
             ),
             SizedBox(
               width: double.infinity,
@@ -56,11 +51,8 @@ class _ProverbScreenState extends State<ProverbScreen> {
                     .toList(),
               ),
             ),
-            Text(
-              "Tilraunir eftir: ${ProverbGame.lives - ProverbGame.tries}",
-              style:
-                  GoogleFonts.roboto(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
+            mainText(
+                "Tilraunir eftir: ${ProverbGame.lives - ProverbGame.tries}"),
             SizedBox(
               width: double.infinity,
               height: 300.0,
@@ -141,13 +133,7 @@ class _ProverbScreenState extends State<ProverbScreen> {
                       randomProverb = newProverb();
                     });
                   },
-                  child: Text(
-                    'Reyna aftur',
-                    style: GoogleFonts.roboto(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
-                  ),
+                  child: mainText("Reyna aftur"),
                 ),
               ),
             ),

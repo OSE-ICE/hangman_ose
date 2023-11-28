@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hangman_ose/widget/headline_text.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({Key? key}) : super(key: key);
@@ -11,13 +11,10 @@ class AboutScreen extends StatelessWidget {
       appBar: AppBar(
         foregroundColor: Colors.white,
         backgroundColor: Colors.indigo.shade500,
-        title: Text(
-          'Um Hengimann',
-          style: GoogleFonts.caveat(fontSize: 50, color: Colors.white),
-        ),
+        title: headlineText("Um Hengimann"),
       ),
       body: Padding(
-        padding: EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(12.0),
         child: Text(
           'Hengimann er leikur þar sem þú átt að giska á orð. '
           'Þú getur valið flokk og þá kemur orð úr þeim flokki. '
