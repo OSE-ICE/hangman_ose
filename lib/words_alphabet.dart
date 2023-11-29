@@ -55,9 +55,12 @@ String newWord() {
 }
 
 List<String> proverbs = [
-  "Sjaldan fellur eplið langt frá eikini",
+  "Betra er geymt en gleymt",
   "sjaldan er ein báran stök",
   "Glöggt er gests augað",
+  "Græddur er geymdur eyrir",
+  "Fyrr má nú rota en dauðrota",
+  "Fokið er í flest skjól",
 ];
 
 String randomProverb = proverbs[Random().nextInt(proverbs.length)];

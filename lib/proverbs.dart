@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hangman_ose/game.dart';
 import 'package:hangman_ose/widget/headline_text.dart';
-import 'package:hangman_ose/widget/letter.dart';
 import 'package:hangman_ose/widget/main_text.dart';
 import 'package:hangman_ose/words_alphabet.dart';
 
@@ -32,23 +31,16 @@ class ProverbScreenState extends State<ProverbScreen> {
               padding: const EdgeInsets.all(10.0),
               child: mainText("Giskaðu á málsháttinn"),
             ),
-            SizedBox(
-              width: double.infinity,
-              height: 300,
-              child: GridView.count(
-                crossAxisCount: 8,
-                mainAxisSpacing: 8,
-                crossAxisSpacing: 8,
-                padding: const EdgeInsets.all(8),
-                children: randomProverb
-                    .split("")
-                    .map((e) => letter(
-                        e.toUpperCase(),
-                        Game.tries >= 10
-                            ? false
-                            : !ProverbGame.selectedCharacter
-                                .contains(e.toUpperCase())))
-                    .toList(),
+            Padding(
+              padding: const EdgeInsets.all(3),
+              child: SizedBox(
+                width: double.infinity,
+                height: 300,
+                child: Wrap(
+                  spacing: 2, // to match crossAxisSpacing in GridView
+                  runSpacing: 2, // to match mainAxisSpacing in GridView
+                  children: mapWordsToWidgets(randomProverb),
+                ),
               ),
             ),
             mainText(

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-Widget letter(String character, bool hidden) {
+Widget letter(String character, bool hidden, bool isSpace) {
   return Container(
     height: 45,
     width: 45,
     padding: const EdgeInsets.fromLTRB(17, 10, 5, 5),
     decoration: BoxDecoration(
-      color: Colors.indigo.shade400,
+      color: isSpace ? Colors.transparent : Colors.indigo.shade400,
       borderRadius: BorderRadius.circular(4.0),
     ),
     child: Visibility(

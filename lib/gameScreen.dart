@@ -52,7 +52,8 @@ class SecondRouteState extends State<SecondRoute> {
                       e.toUpperCase(),
                       Game.tries >= 7
                           ? false
-                          : !Game.selectedCharacter.contains(e.toUpperCase())))
+                          : !Game.selectedCharacter.contains(e.toUpperCase()),
+                      e == " "))
                   .toList(),
             ),
             mainText("Tilraunir eftir: ${Game.lives - Game.tries}"),
