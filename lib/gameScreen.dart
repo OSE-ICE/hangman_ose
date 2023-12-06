@@ -6,14 +6,14 @@ import 'package:hangman_ose/words_alphabet.dart';
 import 'package:hangman_ose/widget/letter.dart';
 import 'package:hangman_ose/game.dart';
 
-class SecondRoute extends StatefulWidget {
-  const SecondRoute({Key? key}) : super(key: key);
+class GameScreen extends StatefulWidget {
+  const GameScreen({Key? key}) : super(key: key);
 
   @override
-  SecondRouteState createState() => SecondRouteState();
+  GameScreenState createState() => GameScreenState();
 }
 
-class SecondRouteState extends State<SecondRoute> {
+class GameScreenState extends State<GameScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

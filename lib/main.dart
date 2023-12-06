@@ -10,13 +10,13 @@ void main() {
   runApp(
     const MaterialApp(
       title: 'Hangman',
-      home: FirstRoute(),
+      home: WelcomeScreen(),
     ),
   );
 }
 
-class FirstRoute extends StatelessWidget {
-  const FirstRoute({super.key});
+class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +83,7 @@ class FirstRoute extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const SecondRoute()),
+                  MaterialPageRoute(builder: (context) => const GameScreen()),
                 );
               },
             ),
