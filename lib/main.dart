@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hangman_ose/gameScreen.dart';
 import 'package:hangman_ose/jokes.dart';
 import 'package:hangman_ose/about_screen.dart';
@@ -7,6 +8,8 @@ import 'package:hangman_ose/widget/headline_text.dart';
 import 'package:hangman_ose/widget/main_text.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(
     const MaterialApp(
       title: 'Hangman',
