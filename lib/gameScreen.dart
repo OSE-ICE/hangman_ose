@@ -91,11 +91,6 @@ class GameScreenState extends State<GameScreen> {
                                     Game.lives = 8;
                                   }
                                 });
-                                print(Game.lives);
-                                print(Game.tries);
-                                print(word.toUpperCase().split(""));
-                                print(Game.checkWinner.toSet());
-                                print(Game.checkWinner);
                               }
                             : null,
                     shape: RoundedRectangleBorder(

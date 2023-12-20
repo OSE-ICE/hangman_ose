@@ -37,8 +37,8 @@ class ProverbScreenState extends State<ProverbScreen> {
                 width: double.infinity,
                 height: 300,
                 child: Wrap(
-                  spacing: 2, // to match crossAxisSpacing in GridView
-                  runSpacing: 2, // to match mainAxisSpacing in GridView
+                  spacing: 2,
+                  runSpacing: 2,
                   children: mapWordsToWidgets(randomProverb),
                 ),
               ),
@@ -83,14 +83,6 @@ class ProverbScreenState extends State<ProverbScreen> {
                                 ProverbGame.lives = 10;
                               }
                             });
-                            print(ProverbGame.lives);
-                            print(ProverbGame.tries);
-                            print(randomProverb
-                                .toUpperCase()
-                                .replaceAll(" ", "")
-                                .split(""));
-                            print(ProverbGame.checkWinner.toSet());
-                            print(ProverbGame.checkWinner);
                           }
                         : null,
                     shape: RoundedRectangleBorder(
