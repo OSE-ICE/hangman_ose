@@ -72,9 +72,9 @@ class WelcomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Image.asset(
-              "assets/img/welcome_img.jpg",
+              "assets/img/welcome_img.png",
+              height: 500,
             ),
-            const SizedBox(height: 20),
             SizedBox(
               width: 380,
               child: Center(
