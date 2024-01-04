@@ -1,16 +1,8 @@
 # hangman_ose
 
-A new Flutter project.
+Final assignment for a school project.  This is a hangman in Icelandic with a few Icelandic words.
+In the drawer menu you can read about the game and there is another game were you can guess a few
+Icelandic proverbs.  The game is in Icelandic and the proverbs are in Icelandic.
+On the home screen there is a new random joke in Icelandic that refreshes every time you restart the app.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

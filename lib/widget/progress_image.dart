@@ -5,7 +5,7 @@ Widget progressImage(bool visible, String path) {
     visible: visible,
     child: Container(
       width: 300,
-      height: 350,
+      height: 340,
       child: Image.asset(path),
     ),
   );

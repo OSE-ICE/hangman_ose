@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 Widget letter(String character, bool hidden, bool isSpace) {
   return Container(
-    height: 45,
-    width: 45,
+    height: 40,
+    width: 40,
     padding: const EdgeInsets.fromLTRB(17, 10, 5, 5),
     decoration: BoxDecoration(
       color: isSpace ? Colors.transparent : Colors.indigo.shade400,
