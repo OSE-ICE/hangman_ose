@@ -73,15 +73,15 @@ class WelcomeScreen extends StatelessWidget {
           children: [
             Image.asset(
               "assets/img/welcome.jpg",
-              height: 500,
+              height: 380,
             ),
             SizedBox(
-              width: 380,
+              width: 340,
               child: Center(
                 child: mainText(randomJokes),
               ),
             ),
-            const SizedBox(height: 80),
+            const SizedBox(height: 50),
             ElevatedButton(
               child: mainText("Spila leik"),
               onPressed: () {

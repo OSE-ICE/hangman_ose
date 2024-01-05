@@ -59,12 +59,12 @@ class GameScreenState extends State<GameScreen> {
             mainText("Tilraunir eftir: ${Game.lives - Game.tries}"),
             SizedBox(
               width: double.infinity,
-              height: 300.0,
+              height: 250,
               child: GridView.count(
-                crossAxisCount: 7,
-                mainAxisSpacing: 8.0,
-                crossAxisSpacing: 8.0,
-                padding: const EdgeInsets.all(8.0),
+                crossAxisCount: 8,
+                mainAxisSpacing: 7.0,
+                crossAxisSpacing: 7.0,
+                padding: const EdgeInsets.all(7.0),
                 children: alphabet.map((e) {
                   return RawMaterialButton(
                     onPressed:
