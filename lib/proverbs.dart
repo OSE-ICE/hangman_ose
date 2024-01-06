@@ -35,7 +35,7 @@ class ProverbScreenState extends State<ProverbScreen> {
               padding: const EdgeInsets.all(3),
               child: SizedBox(
                 width: double.infinity,
-                height: 300,
+                height: 240,
                 child: Wrap(
                   spacing: 2,
                   runSpacing: 2,
@@ -47,9 +47,9 @@ class ProverbScreenState extends State<ProverbScreen> {
                 "Tilraunir eftir: ${ProverbGame.lives - ProverbGame.tries}"),
             SizedBox(
               width: double.infinity,
-              height: 300.0,
+              height: 240,
               child: GridView.count(
-                crossAxisCount: 7,
+                crossAxisCount: 8,
                 mainAxisSpacing: 8.0,
                 crossAxisSpacing: 8.0,
                 padding: const EdgeInsets.all(8.0),

@@ -59,7 +59,7 @@ class GameScreenState extends State<GameScreen> {
             mainText("Tilraunir eftir: ${Game.lives - Game.tries}"),
             SizedBox(
               width: double.infinity,
-              height: 250,
+              height: 240,
               child: GridView.count(
                 crossAxisCount: 8,
                 mainAxisSpacing: 7.0,
